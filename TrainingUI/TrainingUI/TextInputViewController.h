@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TrainingUIViewController.h"
 
-@interface TextInputViewController : UIViewController
+@interface TextInputViewController : TrainingUIViewController
 
 @end

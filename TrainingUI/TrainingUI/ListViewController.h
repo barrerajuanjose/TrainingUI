@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TrainingUIViewController.h"
 
-@interface ListViewController : UIViewController
+@interface ListViewController : TrainingUIViewController
+
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TextInputViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,8 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
     // Add first VC and show it
-    self.window.rootViewController = nil;
+    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:[[TextInputViewController alloc] initWithNibName:nil bundle:nil]];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
 
     return YES;

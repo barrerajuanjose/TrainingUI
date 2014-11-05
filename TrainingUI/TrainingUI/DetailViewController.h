@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Item.h"
+#import "TrainingUIViewController.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : TrainingUIViewController
+
+@property (nonatomic, strong) Item* item;
 
 @end
