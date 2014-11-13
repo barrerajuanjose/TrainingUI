@@ -13,6 +13,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) RemoveItemService *remoteItemService;
 @end
 
 @implementation DetailViewController
@@ -26,17 +27,25 @@
 }
 
 - (void)deleteItem {
-	RemoveItemService *service = [[RemoveItemService alloc] init];
+	self.remoteItemService = [[RemoveItemService alloc] init];
 
 	[self showLoadingMessage:@"Cargando"];
-	[service removeItem:self.item callbackBlock: ^(RemoveItemService *service) {
-	    [self hideLoadingMessage];
+    
+    __weak typeof(self) weakSelf = self;
+    
+	[self.remoteItemService removeItem:self.item callbackBlock: ^(RemoveItemService *service) {
+	    [weakSelf hideLoadingMessage];
 	}];
+}
+
+- (void) dealloc {
+    [self.remoteItemService invalidate];
 }
 
 - (void)updateViews {
 	self.titleLabel.text = self.item.title;
-	self.descriptionLabel.text = self.item.itemDescription;
+    self.descriptionLabel.text = self.item.itemDescription;
+    
 	self.imageView.image = [UIImage imageNamed:self.item.imageName];
 }
 

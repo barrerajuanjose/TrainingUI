@@ -14,17 +14,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="391" height="550"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gw3-7V-azA">
-                    <rect key="frame" x="113" y="71" width="186" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelh jk lkg gh jgh jgh jkgjk gjkg jkg jkhgjkhgjkhg jkgh jkgh jkhg kjg" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="gw3-7V-azA">
+                    <rect key="frame" x="156" y="60" width="100" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="FaC-CQ-z24"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lR-jN-TwL">
-                    <rect key="frame" x="33" y="131" width="240" height="43"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="5lR-jN-TwL">
+                    <rect key="frame" x="82" y="160" width="287" height="264"/>
                     <string key="text">Label Ahora puedes ver los descuentos y ofertas en tus productos preferidos.
 Agora você pode ver os descontos e ofertas nos seus produtos preferidos!
 Now you can see all deals and discounts on your favorite products! Ahora puedes ver los descuentos y ofertas en tus productos preferidos.
@@ -34,25 +37,41 @@ Now you can see all deals and discounts on your favorite products!</string>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-YZ-TkZ">
-                    <rect key="frame" x="33" y="71" width="61" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Titulo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-YZ-TkZ">
+                    <rect key="frame" x="88" y="80" width="49" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny2-Yh-OQN">
-                    <rect key="frame" x="113" y="104" width="95" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripcion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny2-Yh-OQN">
+                    <rect key="frame" x="185" y="133" width="95" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a6g-Sb-NhB">
-                    <rect key="frame" x="53" y="182" width="200" height="100"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a6g-Sb-NhB">
+                    <rect key="frame" x="125" y="432" width="200" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="nNl-Mc-Jgc"/>
+                        <constraint firstAttribute="height" constant="100" id="uhs-CN-N2h"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="12" y="406"/>
+            <constraints>
+                <constraint firstItem="a6g-Sb-NhB" firstAttribute="top" secondItem="5lR-jN-TwL" secondAttribute="bottom" constant="8" id="5tT-zv-Qs5"/>
+                <constraint firstItem="gw3-7V-azA" firstAttribute="centerY" secondItem="eEi-YZ-TkZ" secondAttribute="centerY" id="Grl-96-gdy"/>
+                <constraint firstItem="ny2-Yh-OQN" firstAttribute="centerX" secondItem="gw3-7V-azA" secondAttribute="centerX" constant="26.5" id="H5d-Bg-17s"/>
+                <constraint firstItem="5lR-jN-TwL" firstAttribute="top" secondItem="ny2-Yh-OQN" secondAttribute="bottom" constant="6" id="Ime-Wc-HB1"/>
+                <constraint firstItem="eEi-YZ-TkZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="Kas-C0-h7Y"/>
+                <constraint firstAttribute="centerX" secondItem="eEi-YZ-TkZ" secondAttribute="centerX" constant="83.5" id="MVC-HK-K8x"/>
+                <constraint firstItem="ny2-Yh-OQN" firstAttribute="top" secondItem="gw3-7V-azA" secondAttribute="bottom" constant="12" id="UDQ-8m-JRi"/>
+                <constraint firstItem="gw3-7V-azA" firstAttribute="leading" secondItem="eEi-YZ-TkZ" secondAttribute="trailing" constant="19" id="WNq-CB-wTN"/>
+                <constraint firstItem="a6g-Sb-NhB" firstAttribute="centerX" secondItem="5lR-jN-TwL" secondAttribute="centerX" id="qPM-7G-lrA"/>
+                <constraint firstItem="ny2-Yh-OQN" firstAttribute="centerX" secondItem="5lR-jN-TwL" secondAttribute="centerX" constant="7.5" id="sSe-2p-lC0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="47.5" y="441"/>
         </view>
     </objects>
 </document>

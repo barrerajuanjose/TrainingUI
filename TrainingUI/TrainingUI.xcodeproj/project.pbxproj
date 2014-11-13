@@ -25,6 +25,8 @@
 		8C950AB11A0A5ED4005DE2B5 /* GetItemsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C950AB01A0A5ED4005DE2B5 /* GetItemsService.m */; };
 		8C950AB41A0A9AB7005DE2B5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C950AB31A0A9AB7005DE2B5 /* MBProgressHUD.m */; };
 		8C950AB71A0A9B03005DE2B5 /* TrainingUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C950AB61A0A9B03005DE2B5 /* TrainingUIViewController.m */; };
+		FC563A681A139CC100DC2AC2 /* CustomCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC563A661A139CC100DC2AC2 /* CustomCellTableViewCell.m */; };
+		FC563A691A139CC100DC2AC2 /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC563A671A139CC100DC2AC2 /* CustomCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,9 @@
 		8C950AB31A0A9AB7005DE2B5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8C950AB51A0A9B03005DE2B5 /* TrainingUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainingUIViewController.h; sourceTree = "<group>"; };
 		8C950AB61A0A9B03005DE2B5 /* TrainingUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainingUIViewController.m; sourceTree = "<group>"; };
+		FC563A651A139CC100DC2AC2 /* CustomCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellTableViewCell.h; sourceTree = "<group>"; };
+		FC563A661A139CC100DC2AC2 /* CustomCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTableViewCell.m; sourceTree = "<group>"; };
+		FC563A671A139CC100DC2AC2 /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 		8C511FBC1A094629001F1657 /* TrainingUI */ = {
 			isa = PBXGroup;
 			children = (
+				FC563A641A139C7E00DC2AC2 /* Cell */,
 				8C511FF01A09480A001F1657 /* Modal */,
 				8C511FE41A094775001F1657 /* TextInputViewController */,
 				8C511FE81A0947E4001F1657 /* ListViewController */,
@@ -226,6 +232,16 @@
 			name = Service;
 			sourceTree = "<group>";
 		};
+		FC563A641A139C7E00DC2AC2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC563A651A139CC100DC2AC2 /* CustomCellTableViewCell.h */,
+				FC563A661A139CC100DC2AC2 /* CustomCellTableViewCell.m */,
+				FC563A671A139CC100DC2AC2 /* CustomCellTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC563A691A139CC100DC2AC2 /* CustomCellTableViewCell.xib in Resources */,
 				8C511FCE1A094629001F1657 /* LaunchScreen.xib in Resources */,
 				8C511FCB1A094629001F1657 /* Images.xcassets in Resources */,
 				8C511FFC1A097135001F1657 /* DetailViewController.xib in Resources */,
@@ -331,6 +348,7 @@
 				8C511FEF1A0947FF001F1657 /* DetailViewController.m in Sources */,
 				8C511FC31A094629001F1657 /* AppDelegate.m in Sources */,
 				8C950AB71A0A9B03005DE2B5 /* TrainingUIViewController.m in Sources */,
+				FC563A681A139CC100DC2AC2 /* CustomCellTableViewCell.m in Sources */,
 				8C511FE71A0947D6001F1657 /* TextInputViewController.m in Sources */,
 				8C511FEB1A0947F0001F1657 /* ListViewController.m in Sources */,
 				8C950AB41A0A9AB7005DE2B5 /* MBProgressHUD.m in Sources */,

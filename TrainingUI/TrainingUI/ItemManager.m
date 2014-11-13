@@ -34,12 +34,19 @@
 
         for (NSInteger index = 1; index < 11; index++) {
             Item* anItem = [[Item alloc] init];
-            anItem.title = [NSString stringWithFormat:@"Titulo %ld", (long)index];
-            anItem.itemDescription = [NSString stringWithFormat:@"Descripcion %ld", (long)index];
+
             if (index % 2 == 0) {
+                
+                anItem.title = @"Este titulo es muy largo Este titulo es muy largo Este titulo es muy largo Este titulo es muy largo Este titulo es muy largo Este titulo es muy largo Este titulo es muy largo v Este titulo es muy largo ";
+                anItem.itemDescription = @"jkjgjhg gh jg jggh jghdsfgfdgghg fghdfghfg hfgdhf dghfgdh gfdhdfg hdfhdg gh dfhdfg hdf hdf hdgh fgd";
                 anItem.imageName = @"ItemImage1";
+                
             } else {
+                
+                anItem.title = [NSString stringWithFormat:@"Titulo %ld", (long)index];
+                anItem.itemDescription = [NSString stringWithFormat:@"Descripcion %ld", (long)index];
                 anItem.imageName = @"ItemImage2";
+                
             }
             [self.items addObject:anItem];
         }

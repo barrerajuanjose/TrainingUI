@@ -8,12 +8,16 @@
 
 #import "ListViewController.h"
 #import "GetItemsService.h"
+#import "Item.h"
+#import "DetailViewController.h"
+#import "CustomCellTableViewCell.h"
 
 #define kCellKey @"CellKey"
 
 @interface ListViewController() <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray* itemsToShow;
 @property (nonatomic, weak) IBOutlet UITableView* tableView;
+@property (nonatomic, strong) CustomCellTableViewCell *prototypeCell;
 @end
 
 @implementation ListViewController
@@ -21,6 +25,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    UINib *cellNib = [UINib nibWithNibName:@"CustomCellTableViewCell" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:kCellKey];
+    
+    [self reloadItems];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [self reloadItems];
+}
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *) indexPath {
+    Item *item = self.itemsToShow[indexPath.row];
+    
+    if( self.prototypeCell == nil ) {
+        self.prototypeCell = [[NSBundle mainBundle] loadNibNamed:@"CustomCellTableViewCell" owner:nil options:nil][0];
+    }
+    
+    [self.prototypeCell changeItem: item];
+    
+    return [self.prototypeCell height];
+}
+
+-(CGFloat) tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 10000.f;
+}
+
+#pragma mark - UITableView
+
+- (void) reloadItems {
     [self showLoadingMessage:@"Cargando"];
     GetItemsService* getItemsService = [[GetItemsService alloc] init];
     [getItemsService getItemsWithCallbackBlock:^(GetItemsService *service, NSArray *allItems) {
@@ -29,8 +62,6 @@
         [self.tableView reloadData];
     }];
 }
-
-#pragma mark - UITableView
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -41,14 +72,24 @@
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kCellKey];
-
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellKey];
-    }
-    cell.textLabel.text = [self.itemsToShow[indexPath.row] title];
+    CustomCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellKey];
+    
+    Item *item = self.itemsToShow[indexPath.row];
+    
+    [cell changeItem: item];
 
     return cell;
+}
+
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Item *item = self.itemsToShow[indexPath.row];
+    
+    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:nil bundle:nil];
+    
+    detailViewController.item = item;
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
